@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { LoginButton } from "@/components/auth/login-button";
+import { FaUserLock } from "react-icons/fa";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -15,10 +16,11 @@ export default function Home() {
       <div className="space-y-6 text-center">
         <h1
           className={cn(
-            "text-6xl font-semibold text-white drop-shadow-md",
+            "text-6xl font-semibold text-white drop-shadow-md flex gap-2 items-center justify-center",
             font.className
           )}
         >
+          <FaUserLock />
           Auth
         </h1>
         <p className="text-white text-lg">Serviço de autenticação</p>
